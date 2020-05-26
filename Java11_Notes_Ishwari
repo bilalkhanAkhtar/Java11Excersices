@@ -1,0 +1,35 @@
+Java 11 is the second LTS release after Java 8. 
+
+Some of the important Java 11 features are:
+Running Java File with single command
+New utility methods in String class
+Local-Variable Syntax for Lambda Parameters
+Nested Based Access Control
+Reading/Writing Strings to and from the Files
+
+Example for new  functions added like repeat(int),lines()
+ 
+import java.util.*;
+import java.util.stream.Collectors;
+public class Main {
+    public static void main(String[] args) throws Exception {
+        String str = "*".repeat(2);
+        System.out.println(str); //prints **
+        		
+		String str = "JD\nJD\nJD"; 
+        System.out.println(str);
+        System.out.println(str.lines().collect(Collectors.toList()));
+    }
+}
+
+
+TimeUnit Conversion: This method is used to convert the given time to a unit like DAY, MONTH, YEAR and for time too.
+jshell>TimeUnit c = TimeUnit.DAYS;
+Output: DAYS
+
+jshell>c.convert(Duration.ofHours(24));
+Output: 1
+
+jshell>c.convert(Duration.ofHours(50));
+Output: 2
+
